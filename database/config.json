@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "db-test-1",
+    "host": "localhost",
+    "dialect": "mariadb",
+    "port": "3306"
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "db-server",
+    "host": "localhost",
+    "dialect": "mariadb",
+    "port": "3306"
+  },
+  "production": {
+    "username": "id21748088_databsr",
+    "password": "Databsr1@",
+    "database": "id21748088_database",
+    "host": "datatemperaturebsr.000webhostapp.com",
+    "dialect": "mariadb",
+    "port": "3306"
+  }
+}
