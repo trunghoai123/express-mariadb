@@ -1,12 +1,13 @@
-const express = require('express');
+require("dotenv").config({ path: ".env" }); // Load environment variables from .env file
+const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
-const UserRoute = require('./routes/UserRoute');
+const UserRoute = require("./routes/UserRoute");
 
 // Import routes
-app.use('/users', UserRoute); // Mount the User router under '/users'
+app.use("/users", UserRoute); // Mount the User router under '/users'
 
-console.log('runned');
+console.log("runned");
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

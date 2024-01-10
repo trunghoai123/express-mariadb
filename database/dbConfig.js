@@ -1,5 +1,5 @@
-require('dotenv').config(); // Load environment variables from .env file
-const { Sequelize } = require('sequelize');
+require("dotenv").config(); // Load environment variables from .env file
+const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize(
   process.env.DB_DATABASE,
@@ -7,7 +7,8 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     host: process.env.DB_HOST,
-    dialect: 'mariadb', // Change this to your database dialect (e.g., 'mysql', 'postgres', 'sqlite', etc.)
+    port: process.env.DB_PORT,
+    dialect: "mariadb", // Change this to your database dialect (e.g., 'mysql', 'postgres', 'sqlite', etc.)
     // Additional options (if needed)
   }
 );
@@ -16,9 +17,9 @@ const sequelize = new Sequelize(
 async function testDatabaseConnection() {
   try {
     await sequelize.authenticate();
-    console.log('Database connection successful.');
+    console.log("Database connection successful.");
   } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error("Unable to connect to the database:", error);
   }
 }
 
